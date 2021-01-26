@@ -1,0 +1,32 @@
+<!-- begin feedback -->
+<section class="feedback">
+  <div class="container">
+    <div class="feedback__wrapper">
+      <h2 class="feedback__title title">they are happy!</h2>
+      <ul class="feedback__persons-list">
+        {% for item in data.feedbacks %}
+        <li class="feedback__item">
+          <div class="feedback__image">
+            <img class="feedback__photo" src="{{ item.image }}" alt="{{ item.alt }}"/>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="feedback__info-list js-feedbacks owl-carousel owl-theme">
+        {% for item in data.feedbacks %}
+        <div class="feedback__point">
+          <div class="feedback__image feedback__image feedback__image_hidden">
+            <img class="feedback__photo" src="{{ item.image }}" alt="{{ item.alt }}"/>
+          </div>
+          <span class="feedback__name">{{ item.name }}</span>
+          <span class="feedback__position">{{ item.position }}</span>
+          <img class="feedback__icon" src="./img/quote-linear.svg" alt="Icon"/>
+          <p class="feedback__text">{{ item.feedback }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end feedback -->
+

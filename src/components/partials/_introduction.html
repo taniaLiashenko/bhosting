@@ -1,0 +1,35 @@
+<!-- begin introduction -->
+<section class="introduction">
+  <div class="container">
+    <div class="introduction__wrapper">
+      <ul class="introduction__socials socials">
+        {% for icon in data.socialsIntro %}
+        <li class="socials__icon" aria-label="{{ icon.label }}">
+          <a class="socials__link" href="{{ icon.link }}">{{ mixins.icon(icon.image) }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="introduction__slider slider-started js-slider-started owl-carousel owl-theme">
+        {% for slide in data.sliderStarted %}
+        <div class="slider-started__slide">
+          <h2 class="slider-started__title title title_white title_big">{{ slide.title }}</h2>
+          {% if slide.list %}
+          <ul class="slider-started__list">
+            {% for point in slide.list %}
+            <li class="slider-started__point">
+              <span class="slider-started__value {% if point.icon %}slider-started__value_padding{% endif %}">{{ point.value }}{% if point.icon %}{{ mixins.icon(point.icon) }}{% endif %}</span>
+              <span class="slider-started__text">{{ point.text | safe}}</span>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          <a class="slider-started__button button" href="{{ slide.button.link }}">{{ slide.button.text }}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end introduction -->
+

@@ -1,0 +1,39 @@
+=bg
+  +r(1500)
+    @content
+
+=md
+  +r(1023)
+    @content
+
+=sm
+  +r(767)
+    @content
+
+=xs
+  +r(599)
+    @content
+
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+=rmin($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+
+=rh($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+=rhmin($height)
+  @media only screen and (min-height: $height + "px")
+    @content
+
+=font($alias, $name)
+  @font-face
+    font-family: $alias
+    src: url("~@/assets/fonts/" + $name + ".woff2") format("woff2"), url("~@/assets/fonts/" + $name + ".woff") format("woff")
+    font-weight: normal
+    font-style: normal
+    font-display: swap

@@ -1,0 +1,38 @@
+<!-- begin blog -->
+<section class="blog">
+  <div class="container">
+    <div class="blog__wrapper">
+      <ul class="blog__list">
+        {% for item in data.blog %}
+        <li class="blog__item">
+          <div class="blog__heading">
+            <div class="blog__image">
+              <img class="blog__photo" src="{{ item.image }}" alt="{{ item.alt }}"/>
+            </div>
+            <span class="blog__date">{{ item.date }}</span>
+          </div>
+          <div class="blog__body">
+            <span class="blog__author">{{ item.author }}</span>
+            <h3 class="blog__title">{{ item.title }}</h3>
+            <p class="blog__text">{{ item.text }}</p>
+            <div class="blog__actions">
+              <a class="blog__button" href="{{ item.link }}">Read more</a>
+              <div class="blog__socials">
+                <button class="blog__comment" type="button">
+                  {{ mixins.icon('message-outline') }}
+                  <span class="blog__count">16</span>
+                </button>
+                <button class="blog__share" type="button">
+                  {{ mixins.icon('share') }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end blog -->
+

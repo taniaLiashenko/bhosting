@@ -1,0 +1,17 @@
+<!-- begin logos -->
+<section class="logos">
+  <div class="container">
+    <div class="logos__wrapper">
+      <ul class="logos__list">
+        {% for item in data.logos %}
+        <li class="logos__item">
+          <a href="{{ item.link }}">
+            <img src="{{ item.image }}" alt="{{ item.alt }}"/>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end logos -->

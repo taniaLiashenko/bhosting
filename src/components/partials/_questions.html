@@ -1,0 +1,40 @@
+<!-- begin questions -->
+<section class="questions">
+  <div class="container">
+    <div class="questions__wrapper">
+      <h2 class="questions__title title title_left">Have question?</h2>
+      <div class="questions__inner js-tabs">
+        <div class="questions__nav">
+          <h3 class="questions__subtitle">Categories</h3>
+          <ul class="questions__list">
+            {% for item in data.questions %}
+            <li class="questions__list-item {% if item.status %}{{ item.status }}{% endif %} js-tab" data-tab="{{ item.data }}">
+              <button class="questions__tab">{{ item.name }} <span>({{ item.count }})</span></button>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="questions__body">
+          {% for point in data.accordion %}
+          <div class="questions__point {% if point.status %}{{ point.status }}{% endif %} js-tab-text js-accordion-wrapper" name="{{ point.data }}">
+            {% for item in point.list %}
+            <div class="questions__item js-accordion-inner {% if item.status %}{{ item.status }}{% endif %}">
+              <p class="questions__answer js-panel">{{ item.answer }}</p>
+              <div class="questions__question js-accordion">
+                <p class="questions__text">{{ item.question }}</p>
+                <button class="questions__button" type="button">
+                  {{ mixins.icon('plus') }}
+                  {{ mixins.icon('minus') }}
+                </button>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end questions -->
+

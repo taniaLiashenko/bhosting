@@ -1,130 +1,85 @@
 <template>
-  <div class="container">
-    <icon-base-added></icon-base-added>
-
-    <div class="inner">
-      <icons-add :is-list="isList" :icons="icons" url="#" src="assets/facebook.svg"></icons-add>
+  <div class="out" id="app">
+    <div class="out__inner">
+      <TheHeader/>
+      <IntroductionBlock></IntroductionBlock>
     </div>
 
-    <div class="inner">
-      <icons-add-second v-for="icon in icons" :key="icon.src" :icon="icon"></icons-add-second>
-    </div>
+    <ExperienceBlock></ExperienceBlock>
+    <SearchBlock></SearchBlock>
+    <StepsBlock></StepsBlock>
+    <AdvantagesBlock></AdvantagesBlock>
+    <PackagesBlock></PackagesBlock>
+    <InfoBlock></InfoBlock>
+    <AdvicesBlock></AdvicesBlock>
+    <StatisticsBlock></StatisticsBlock>
+    <FeedbackBlock></FeedbackBlock>
+    <BlogBlock></BlogBlock>
+    <QuestionsBlock></QuestionsBlock>
+    <SubscribeBlock></SubscribeBlock>
+    <LogosBlock></LogosBlock>
 
-    <div class="inner">
-      <icons-add-third :icons="iconsThird"></icons-add-third>
-    </div>
-
-    <div class="inner">
-      <icons-add-fourth></icons-add-fourth>
-    </div>
-
-    <VToolBar title="To-Do List"/>
-
-    <v-card-item title="Tasks">
-      <list-point v-for="item in listPoints" :key="item.value" :item="item">
-        <ButtonDelete/>
-      </list-point>
-    </v-card-item>
-
-    <v-card-item title="New Task">
-      <text-input></text-input>
-    </v-card-item>
+    <TheFooter/>
   </div>
 </template>
 
 <script>
-import IconBaseAdded from './components/IconBaseAdded.vue'
-import IconsAdd from './components/IconsAdd.vue'
-import IconsAddSecond from './components/IconsAddSecond.vue'
-import IconsAddThird from './components/IconsAddThird.vue'
-import IconsAddFourth from './components/IconsAddFourth.vue'
-import ButtonDelete from './components/ButtonDelete.vue'
-import VCardItem from './components/VCardItem.vue'
-import ListPoint from './components/ListPoint.vue'
-import TextInput from './components/TextInput.vue'
-import VToolBar from './components/VToolBar.vue'
+import '@/assets/sass/common-styles.sass';
+
+import TheHeader from '@/components/TheHeader.vue';
+import IntroductionBlock from '@/components/IntroductionBlock.vue';
+import TheFooter from '@/components/TheFooter.vue';
+import ExperienceBlock from '@/components/ExperienceBlock.vue';
+import SearchBlock from '@/components/SearchBlock.vue';
+import StepsBlock from '@/components/StepsBlock.vue';
+import AdvantagesBlock from '@/components/AdvantagesBlock.vue';
+import PackagesBlock from '@/components/PackagesBlock.vue';
+import InfoBlock from '@/components/InfoBlock.vue';
+import AdvicesBlock from '@/components/AdvicesBlock.vue';
+import StatisticsBlock from '@/components/StatisticsBlock.vue';
+import FeedbackBlock from '@/components/FeedbackBlock.vue';
+import BlogBlock from '@/components/BlogBlock.vue';
+import QuestionsBlock from '@/components/QuestionsBlock.vue';
+import SubscribeBlock from '@/components/SubscribeBlock.vue';
+import LogosBlock from '@/components/LogosBlock.vue';
 
 export default {
   name: 'App',
   components: {
-    IconBaseAdded,
-    IconsAdd,
-    IconsAddSecond,
-    IconsAddThird,
-    IconsAddFourth,
-    ButtonDelete,
-    VCardItem,
-    ListPoint,
-    TextInput,
-    VToolBar
-  },
-  data() {
-    return {
-      isList: true,
-      icons: [
-        {
-          url: "#",
-          src: "assets/facebook.svg"
-        },
-        {
-          url: "#",
-          src: "assets/instagram.svg"
-        },
-        {
-          url: "#",
-          src: "assets/twitter.svg"
-        }
-      ],
-      iconsThird: [
-        {
-          name: "facebook"
-        },
-        {
-          name: "instagram"
-        },
-        {
-          name: "twitter"
-        }
-      ],
-      listPoints: [
-        {
-          value: "car",
-          text: "Wash the car"
-        },
-        {
-          value: "dishes",
-          text: "Do the dishes"
-        },
-        {
-          value: "dog",
-          text: "Walk the dog"
-        }
-      ]
-    }
+    TheHeader,
+    IntroductionBlock,
+    TheFooter,
+    ExperienceBlock,
+    SearchBlock,
+    StepsBlock,
+    AdvantagesBlock,
+    PackagesBlock,
+    InfoBlock,
+    AdvicesBlock,
+    StatisticsBlock,
+    FeedbackBlock,
+    BlogBlock,
+    QuestionsBlock,
+    SubscribeBlock,
+    LogosBlock
   }
 }
 </script>
 
-<style lang="sass">
-#app
-  font-family: Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
-  margin-top: 60px
+<style lang="sass" scoped>
+  .out
+    overflow-x: hidden
 
-.container
-  display: flex
-  flex-direction: column
-  width: 50%
-  margin: 0 auto
+    &__inner
+      width: 100%
+      background-image: url('~Static/img/background.jpg')
+      background-repeat: no-repeat
+      background-size: 100% 100%
 
-.inner
-  display: flex
-  padding: 10px 0
+      +md
+        background-size: 150% 100%
 
-.icon
-  width: 50px
-  height: 50px
+      +sm
+        background-size: 458% 100%
+        background-position: 54%
 </style>

@@ -1,0 +1,93 @@
+body
+	+OpenSansRegular
+	font-size: 15px
+	line-height: 1.8em
+	color: $black
+
+.container
+	max-width: 1230px
+	margin: 0 auto
+	padding: 0 30px
+
+	&_border
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+.text
+	font-size: 15px
+	line-height: 1.8em
+	color: $grey
+	text-align: center
+
+	&_left
+		text-align: left
+
+		+sm
+			text-align: center
+
+	&_white
+		color: $white
+
+.title
+	+OpenSansBold
+	font-size: 30px
+	line-height: 1.25em
+	color: $dark-grey
+	text-align: center
+	text-transform: uppercase
+
+	&_big
+		font-size: 42px
+
+		+sm
+			font-size: 25px
+
+	&_smaller
+		font-size: 24px
+
+	&_small
+		font-size: 18px
+
+	&_left
+		text-align: left
+
+		+sm
+			text-align: center
+
+	&_white
+		color: $white
+
+	&_font
+		+OpenSansSemiBold
+
+.button
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 140px
+	min-height: 52px
+	padding: 10px
+	+OpenSansSemiBold
+	font-size: 13px
+	line-height: 1em
+	color: $white
+	text-transform: uppercase
+	text-decoration: none
+	background-color: $blue
+	border-radius: 3px
+	border: 3px solid $white
+	border-bottom: none
+	transition: transform 0.25s ease-out, background-color 0.25s ease-out, color 0.25s ease-out, border 0.25s ease-out
+
+	&:hover
+		color: $blue
+		background-color: $white
+		border: 3px solid $blue
+		transform: scale(1.1)
+
+	&_white
+		color: $blue
+		background-color: $white
+		border: 1px solid $blue
+
+	&_font
+		font-size: 20px
