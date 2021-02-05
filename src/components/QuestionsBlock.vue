@@ -171,6 +171,7 @@ export default {
 <style lang="sass">
   .questions
     $this: &
+    text-align: left
 
     &__wrapper
       display: flex

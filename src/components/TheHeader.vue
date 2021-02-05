@@ -7,7 +7,7 @@
           <ContactsBlock></ContactsBlock>
         </div>
         <ul class="header__login">
-          <li class="header__login-item" v-for="item in login" :key="item.image">
+          <li class="header__login-item" v-for="item in login" :key="item.image" @click="openLogin($event, item)">
             <a class="header__link" :class="item.color" :href="item.link" :aria-label="item.arialabel">
               <SvgIcon :name="item.image"/>
             </a>
@@ -21,11 +21,11 @@
         <div class="header__logo">
           <LogoItem :logo-image="logoImage"/>
         </div>
-        <button class="header__burger" type="button">
+        <button class="header__burger" type="button" @click="toggleMobMenu">
           <SvgIcon name="lines"/>
         </button>
-        <nav class="header__menu is-hidden">
-          <button class="header__close" type="button">
+        <nav class="header__menu" v-if="mobMenuOpen">
+          <button class="header__close" type="button" @click="toggleMobMenu">
             <SvgIcon name="close"/>
           </button>
           <ul class="header__menu-list">
@@ -44,6 +44,7 @@
 import SvgIcon from './SvgIcon.vue'
 import ContactsBlock from './ContactsBlock.vue'
 import LogoItem from './LogoItem.vue'
+import { openPopup } from '@/utils.js'
 
 export default {
   name: 'TheHeader',
@@ -54,6 +55,7 @@ export default {
   },
   data() {
     return {
+      mobMenuOpen: false,
       contacts: [
         {
           link: '#',
@@ -75,15 +77,11 @@ export default {
       login: [
         {
           link: '#',
-          image: 'cart',
-          arialabel: 'Go to the cart',
-          color: 'header__link_blue'
-        },
-        {
-          link: '#',
           image: 'user',
           arialabel: 'Go to the profile',
-          color: 'header__link_white'
+          color: 'header__link_white',
+          action: true,
+          id: 'login'
         }
       ],
 
@@ -115,7 +113,19 @@ export default {
         }
       ],
 
-      logoImage: 'Static/img/logo.png'
+      logoImage: '/assets/logo.png'
+    }
+  },
+
+  methods: {
+    openLogin(e, item) {
+      if(item.action) {
+        openPopup(e, item.id);
+      }
+    },
+
+    toggleMobMenu() {
+      this.mobMenuOpen = !this.mobMenuOpen;
     }
   }
 }
@@ -155,12 +165,6 @@ export default {
 
       &:hover
         transform: scale(1.2)
-
-      &_blue
-        background-color: $blue
-
-        .svg-icon
-          fill: $white
 
       &_white
         background-color: $white
@@ -233,21 +237,29 @@ export default {
     &__close,
     &__burger
       display: none
+      background-color: transparent
 
       +sm
         display: block
-        background-color: transparent
 
-        .icon-lines
-          width: 30px
-          height: 30px
+      .svg-icon
+        width: 100%
+        height: 100%
+
+        &--lines
           fill: $blue
 
-        .icon-close
-          position: absolute
-          top: 7px
-          right: 7px
-          width: 20px
-          height: 20px
+        &--close
           fill: $white
+
+    &__burger
+      width: 35px
+      height: 35px
+
+    &__close
+      position: absolute
+      top: 7px
+      right: 7px
+      width: 20px
+      height: 20px
 </style>

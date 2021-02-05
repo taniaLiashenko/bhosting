@@ -4,17 +4,30 @@
     <span class="help-item__title">Need help?</span>
     <span class="help-item__subtitle">Call us!</span>
     <a class="help-item__tel" href="tel:+91254754785">+91 254 754 785</a>
-    <button class="help-item__button button button_font" type="button">Live chat</button>
+    <button @click="initOpenChat" class="help-item__button button button_font" type="button">Live chat</button>
   </div>
 </template>
 
 <script>
 import SvgIcon from './SvgIcon.vue'
+import { openPopup } from '@/utils.js'
 
 export default {
   name: 'HelpItem',
   components: {
     SvgIcon
+  },
+
+  data() {
+    return {
+      id: 'chat'
+    }
+  },
+
+  methods: {
+    initOpenChat(e) {
+      openPopup(e, this.id);
+    }
   }
 }
 </script>

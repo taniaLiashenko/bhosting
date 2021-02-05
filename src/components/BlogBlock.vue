@@ -22,7 +22,7 @@
                     <SvgIcon name="message-outline"/>
                     <span class="blog__count">16</span>
                   </button>
-                  <button class="blog__share" type="button">
+                  <button class="blog__share" type="button" @click="handler($event, item.link)">
                     <SvgIcon name="share"/>
                   </button>
                 </div>
@@ -38,6 +38,7 @@
 
 <script>
 import SvgIcon from './SvgIcon.vue'
+import { openPopup } from '@/utils.js'
 
 export default {
   name: 'BlogBlock',
@@ -46,35 +47,51 @@ export default {
   },
   data() {
     return {
+      id: 'sharing',
       blogPosts: [
         {
-          image: 'Static/img/image-5.jpg',
+          image: '/assets/image-5.jpg',
           alt: 'Team',
           date: '6 Nov',
           author: 'Jordan Alba',
           title: 'What are Website Hosting Services and Which is Right for You?',
           text: 'Shared hosting is the most popular hosting where you share bandwidth, diskspace and capacity,other network.',
-          link: '#'
+          link: '#link1'
         },
         {
-          image: 'Static/img/image-1.jpg',
+          image: '/assets/image-1.jpg',
           alt: 'Team',
           date: '6 Nov',
           author: 'Jordan Alba',
           title: '2What are Website Hosting Services and Which is Right for You?',
           text: 'Shared hosting is the most popular hosting where you share bandwidth, diskspace and capacity,other network.',
-          link: '#'
+          link: '#link2'
         },
         {
-          image: 'Static/img/image-6.jpg',
+          image: '/assets/image-6.jpg',
           alt: 'Man',
           date: '6 Nov',
           author: 'Jordan Alba',
           title: '3What are Website Hosting Services and Which is Right for You?',
           text: 'Shared hosting is the most popular hosting where you share bandwidth, diskspace and capacity,other network.',
-          link: '#'
+          link: '#link3'
         }
       ]
+    }
+  },
+
+  methods: {
+    initOpenSharing(e) {
+      openPopup(e, this.id);
+    },
+
+    setSharedLink(link) {
+      this.$root.blogPostUrl = link;
+    },
+
+    handler(e, link) {
+      this.setSharedLink(link);
+      this.initOpenSharing(e);
     }
   }
 }
@@ -145,6 +162,7 @@ export default {
 
     &__body
       padding: 30px 25px
+      text-align: left
 
     &__author
       margin-bottom: 20px

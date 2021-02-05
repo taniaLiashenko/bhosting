@@ -107,6 +107,7 @@ export default {
     &__info
       width: 650px
       margin-right: 55px
+      text-align: left
 
       +bg
         width: 60%

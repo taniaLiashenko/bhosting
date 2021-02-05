@@ -59,7 +59,7 @@ export default {
   },
   data() {
     return {
-      logoImage: 'Static/img/logo-blue.png',
+      logoImage: '/assets/logo-blue.png',
 
       socialsFooter: [
         {
@@ -224,6 +224,7 @@ export default {
   .footer
     $this: &
 
+    text-align: left
     background-color:	$darker-blue
 
     &__wrapper
@@ -286,6 +287,10 @@ export default {
 
     &__socials
       margin-top: 25px
+
+      .svg-icon
+        width: 80%
+        height: 80%
 
     &__list
       display: flex

@@ -20,7 +20,7 @@
               </div>
               <span class="feedback__name">{{ item.name }}</span>
               <span class="feedback__position">{{ item.position }}</span>
-              <img class="feedback__icon" src="Static/img/quote-linear.svg" alt="Icon"/>
+              <img class="feedback__icon" src="/assets/quote-linear.svg" alt="Icon"/>
               <p class="feedback__text">{{ item.feedback }}</p>
             </div>
           </carousel>
@@ -43,35 +43,35 @@ export default {
     return {
       feedbacks: [
         {
-          image: 'Static/img/avatar-1.png',
+          image: '/assets/avatar-1.png',
           alt: 'Consumer',
           name: 'Addison Tylor',
           position: 'CEO at DMc',
           feedback: 'There is a dizzying array of web hosting providers competing for your business. How can you pinpoint	the best one? If you are looking for a reliable and affordable hosting company? This is the right place to start! I am happy with the Bhost, One of the best hosting.'
         },
         {
-          image: 'Static/img/avatar-2.png',
+          image: '/assets/avatar-2.png',
           alt: 'Consumer2',
           name: 'Name',
           position: 'CEO at DMc',
           feedback: '2There is a dizzying array of web hosting providers competing for your business. How can you pinpoint	the best one? If you are looking for a reliable and affordable hosting company? This is the right place to start! I am happy with the Bhost, One of the best hosting.'
         },
         {
-          image: 'Static/img/avatar-3.png',
+          image: '/assets/avatar-3.png',
           alt: 'Consumer3',
           name: 'Name',
           position: 'CEO at DMc',
           feedback: '3There is a dizzying array of web hosting providers competing for your business. How can you pinpoint	the best one? If you are looking for a reliable and affordable hosting company? This is the right place to start! I am happy with the Bhost, One of the best hosting.'
         },
         {
-          image: 'Static/img/avatar-4.png',
+          image: '/assets/avatar-4.png',
           alt: 'Consumer4',
           name: 'Name',
           position: 'CEO at DMc',
           feedback: '4There is a dizzying array of web hosting providers competing for your business. How can you pinpoint	the best one? If you are looking for a reliable and affordable hosting company? This is the right place to start! I am happy with the Bhost, One of the best hosting.'
         },
         {
-          image: 'Static/img/avatar-5.png',
+          image: '/assets/avatar-5.png',
           alt: 'Consumer5',
           name: 'Name',
           position: 'CEO at DMc',

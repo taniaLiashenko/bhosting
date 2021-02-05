@@ -24,22 +24,22 @@ export default {
       logos: [
         {
           link: '#',
-          image: 'Static/img/logo-1.png',
+          image: '/assets/logo-1.png',
           alt: 'Logo'
         },
         {
           link: '#',
-          image: 'Static/img/logo-2.png',
+          image: '/assets/logo-2.png',
           alt: 'Logo2'
         },
         {
           link: '#',
-          image: 'Static/img/logo-3.png',
+          image: '/assets/logo-3.png',
           alt: 'Logo3'
         },
         {
           link: '#',
-          image: 'Static/img/logo-1.png',
+          image: '/assets/logo-1.png',
           alt: 'Logo4'
         }
       ]

@@ -2,7 +2,7 @@
 <!-- begin contacts -->
   <ul class="contacts">
     <li class="contacts__point" v-for="contact in contacts" :key="contact.image">
-      <a class="contacts__link" :href="contact.link">
+      <a class="contacts__link" :href="contact.link" @click="setAction($event, contact)">
         <SvgIcon :name="contact.image"/>
         <span class="contacts__text">{{ contact.text }}</span>
       </a>
@@ -13,6 +13,7 @@
 
 <script>
 import SvgIcon from './SvgIcon.vue'
+import { openPopup } from '@/utils.js'
 
 export default {
   name: 'ContactsBlock',
@@ -21,11 +22,14 @@ export default {
   },
   data() {
     return {
+      id: 'chat',
       contacts: [
         {
           link: '#',
+          id: 'chat',
           image: 'message',
-          text: 'Live Chat'
+          text: 'Live Chat',
+          action: true
         },
         {
           link: 'tel:+91254878547',
@@ -38,6 +42,14 @@ export default {
           text: 'yourmail@info.com'
         }
       ],
+    }
+  },
+
+  methods: {
+    setAction(e, contact) {
+      if(contact.action) {
+        openPopup(e, contact.id);
+      }
     }
   }
 }

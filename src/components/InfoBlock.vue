@@ -2,7 +2,7 @@
   <!-- begin info -->
   <section class="info">
     <div class="info__image">
-      <img class="info__photo" src="Static/img/image-3.jpg" alt="Young man"/>
+      <img class="info__photo" src="/assets/image-3.jpg" alt="Young man"/>
     </div>
     <div class="info__content">
       <h2 class="info__title title title_left title_white">Web site builder</h2>

@@ -19,19 +19,24 @@
       position: relative
       width: 50px
       height: 50px
-      color: $white
+      color: transparent
       background-color: rgba(26, 26, 26, 0.24)
       border-radius: 2px
       transition: background-color 0.25s ease-out
-      transition: color 0.25s ease-out
 
       &::after
+        content: "<"
         position: absolute
         top: 50%
         left: 50%
+        display: flex
+        justify-content: center
+        align-items: center
         width: 15px
         height: 15px
         color: $white
+        transform: translate(-50%, -50%)
+        transition: color 0.25s ease-out
 
       &:hover
         background-color: rgba(26, 26, 26, 0.1)
@@ -39,13 +44,9 @@
         &::after
           color: $blue
 
-    .owl-prev
-      &::after
-        content: "<"
-
     .owl-next
       &::after
-        content: ">"
+        transform: rotate(180deg), translate(-50%, -50%)
 
 .slider-packages
   .owl-nav

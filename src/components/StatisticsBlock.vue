@@ -1,41 +1,37 @@
 <template>
   <!-- begin statistics -->
-  <section class="statistics">
-    <div class="container">
-      <div class="statistics__wrapper">
-        <ul class="statistics__list">
-          <li class="statistics__item" v-for="item in statistics" :key="item.text">
-            <div class="statistics__image">
-              <SvgIcon :name="item.iconFirst"/>
-              <div class="statistics__icon">
-                <SvgIcon :name="item.iconSecond"/>
+    <section class="statistics">
+      <div class="container">
+        <div class="statistics__wrapper">
+          <ul class="statistics__list">
+            <li class="statistics__item" v-for="item in statistics" :key="item.text">
+              <div class="statistics__image">
+                <SvgIcon :name="item.iconFirst"/>
+                <div class="statistics__icon">
+                  <SvgIcon :name="item.iconSecond"/>
+                </div>
               </div>
-            </div>
-            <span class="statistics__value">
-              <ICountUp
-                :delay="delay"
-                :endVal="item.endVal"
-                :options="options"
-              />
-            </span>
-            <span class="statistics__text">{{ item.text }}</span>
-          </li>
-        </ul>
+                <span class="statistics__value">
+                  <CounterBlock :endVal="item.endVal" :id="item.id"/>
+                </span>
+              <span class="statistics__text">{{ item.text }}</span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   <!-- end statistics -->
 </template>
 
 <script>
 import SvgIcon from './SvgIcon.vue'
-import ICountUp from 'vue-countup-v2';
+import CounterBlock from './CounterBlock.vue'
 
 export default {
   name: 'StatisticsBlock',
   components: {
     SvgIcon,
-    ICountUp
+    CounterBlock
   },
 
   data() {
@@ -45,44 +41,39 @@ export default {
           iconFirst: 'cloud',
           iconSecond: 'user-add',
           endVal: 2514,
+          id: 'user-add',
           text: 'Happy user'
         },
         {
           iconFirst: 'cloud',
           iconSecond: 'pdf',
           endVal: 6875,
+          id: 'pdf',
           text: 'Files Hosted'
         },
         {
           iconFirst: 'cloud',
           iconSecond: 'list',
           endVal: 25025,
+          id: 'list',
           text: 'Pages Served'
         },
         {
           iconFirst: 'cloud',
           iconSecond: 'cart',
           endVal: 147,
-          text: 'our store'
+          id: 'cart',
+          text: 'our store',
         }
-      ],
-      delay: 1000,
-      options: {
-        useEasing: true,
-        useGrouping: true,
-        separator: '',
-        decimal: '',
-        prefix: '',
-        suffix: ''
-      }
+      ]
     }
-  }
+  },
 }
 </script>
 
 <style lang="sass" scoped>
   .statistics
-    background-image: url('~Static/img/background-3.jpg')
+    background-image: url('/assets/background-3.jpg')
     background-repeat: no-repeat
     background-size: 100% 100%
 

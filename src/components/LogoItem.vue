@@ -1,6 +1,6 @@
 <template>
   <a class="logo" href="#">
-    <img class="logo__image" :src="logoImage" alt="Logo" width="70" height="48"/>
+    <img class="logo__image" src="/assets/logo.png" alt="Logo" width="70" height="48"/>
     <span class="logo__word">bhost</span>
   </a>
 </template>

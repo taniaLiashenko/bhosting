@@ -15,7 +15,7 @@
               Please, enter the correct e-mail
             </p>
             <p class="subscribe__successful" v-if="successful">
-              Your e-mail was uccessfully sent!
+              Your e-mail was successfully sent!
             </p>
           </form>
           <div class="subscribe__popup">
@@ -180,7 +180,7 @@ export default {
     &__error
       position: absolute
       top: 60px
-      color: red
+      color: yellow
 
     &__successful
       position: absolute

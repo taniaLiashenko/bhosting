@@ -15,8 +15,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
-        'Static': path.resolve(__dirname, './src/static'),
+        '@': path.resolve(__dirname, './src')
       },
     },
   },

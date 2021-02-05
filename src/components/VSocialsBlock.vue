@@ -59,11 +59,23 @@ export default {
       +sm
         justify-content: center
 
+    .svg-icon
+      width: 100%
+      height: 100%
+      fill: $white
+
     &__icon
+      display: flex
+      align-content: center
+      justify-content: center
+      width: 35px
+      height: 35px
       margin-bottom: 20px
       transition: transform 0.25s ease-out
 
       +sm
+        width: 25px
+        height: 25px
         margin-right: 15px
 
         &:last-of-type
@@ -80,15 +92,10 @@ export default {
           display: flex
           justify-content: center
           align-items: center
-          width: 35px
-          height: 35px
 
-          .icon
-            width: 20px
-            height: 20px
-
-      .svg-icon
-        fill: $white
+        .svg-icon
+          width: 70%
+          height: 70%
 
     &__link
       width: 100%

@@ -62,6 +62,9 @@ export default {
       color: $white
       text-transform: uppercase
 
+      +xs
+        font-size: 32px
+
     &__list
       display: flex
       flex-wrap: wrap
@@ -95,7 +98,7 @@ export default {
         left: 10px
         width: 90px
         height: 105px
-        background-image: url('~Static/img/background-point.png')
+        background-image: url('/assets/background-point.png')
         background-repeat: no-repeat
 
         +sm

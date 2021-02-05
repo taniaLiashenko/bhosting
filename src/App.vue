@@ -18,7 +18,9 @@
     <QuestionsBlock></QuestionsBlock>
     <SubscribeBlock></SubscribeBlock>
     <LogosBlock></LogosBlock>
-
+    <TheChatPopup/>
+    <TheSocialsSharingPopup/>
+    <TheLoginPopup/>
     <TheFooter/>
   </div>
 </template>
@@ -42,6 +44,9 @@ import BlogBlock from '@/components/BlogBlock.vue';
 import QuestionsBlock from '@/components/QuestionsBlock.vue';
 import SubscribeBlock from '@/components/SubscribeBlock.vue';
 import LogosBlock from '@/components/LogosBlock.vue';
+import TheChatPopup from '@/components/TheChatPopup.vue';
+import TheSocialsSharingPopup from '@/components/TheSocialsSharingPopup.vue';
+import TheLoginPopup from '@/components/TheLoginPopup.vue';
 
 export default {
   name: 'App',
@@ -61,8 +66,11 @@ export default {
     BlogBlock,
     QuestionsBlock,
     SubscribeBlock,
-    LogosBlock
-  }
+    LogosBlock,
+    TheChatPopup,
+    TheSocialsSharingPopup,
+    TheLoginPopup
+  },
 }
 </script>
 
@@ -72,7 +80,7 @@ export default {
 
     &__inner
       width: 100%
-      background-image: url('~Static/img/background.jpg')
+      background-image: url('/assets/background.jpg')
       background-repeat: no-repeat
       background-size: 100% 100%
 

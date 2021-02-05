@@ -20,7 +20,7 @@
           </ul>
         </div>
         <div class="experience__image">
-          <img class="experience__photo" src="Static/img/image-1.jpg" alt="A man with the team"/>
+          <img class="experience__photo" src="/assets/image-1.jpg" alt="A man with the team"/>
         </div>
       </div>
     </div>

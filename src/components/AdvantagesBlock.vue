@@ -25,22 +25,22 @@ export default {
     return {
       advantages: [
         {
-          image: 'Static/img/display.svg',
+          image: '/assets/display.svg',
           title: 'Instant Setup',
           text: 'Compress deployment time, protect high-value content,and speed up your site 5x on average.'
         },
         {
-          image: 'Static/img/lock.svg',
+          image: '/assets/lock.svg',
           title: 'Account isolation',
           text: 'Compress deployment time, protect high-value content,and speed up your site 5x on average.'
         },
         {
-          image: 'Static/img/share-linear.svg',
+          image: '/assets/share-linear.svg',
           title: 'Shared hosting plans',
           text: 'Compress deployment time, protect high-value content,and speed up your site 5x on average.'
         },
         {
-          image: 'Static/img/support-linear.svg',
+          image: '/assets/support-linear.svg',
           title: 'Live chat support',
           text: 'Compress deployment time, protect high-value content,and speed up your site 5x on average.'
         }

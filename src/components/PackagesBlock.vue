@@ -27,7 +27,7 @@ export default {
       sliderPackages: [
         {
           title: 'Startup Hosting Package',
-          icon: 'Static/img/cloud-linear.svg',
+          icon: '/assets/cloud-linear.svg',
           price: '$49',
           points: [
             'Website',
@@ -42,12 +42,12 @@ export default {
             text: 'Get started',
             link: '#'
           },
-          image: 'Static/img/image-2.png',
+          image: '/assets/image-2.png',
           alt: 'Computer'
         },
         {
           title: 'Startup Hosting Package 2',
-          icon: 'Static/img/cloud-linear.svg',
+          icon: '/assets/cloud-linear.svg',
           price: '$49',
           points: [
             '2Website',
@@ -62,7 +62,7 @@ export default {
             text: 'Get started',
             link: '#'
           },
-          image: 'Static/img/image-2.png',
+          image: '/assets/image-2.png',
           alt: 'Computer'
         }
       ]
