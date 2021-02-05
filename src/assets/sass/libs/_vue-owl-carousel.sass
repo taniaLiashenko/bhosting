@@ -1,4 +1,4 @@
-.slider-started 
+.slider-started
   .owl-carousel.owl-loaded
     display: flex
     align-items: center
@@ -19,7 +19,7 @@
       position: relative
       width: 50px
       height: 50px
-      color: transparent
+      color: transparent !important
       background-color: rgba(26, 26, 26, 0.24)
       border-radius: 2px
       transition: background-color 0.25s ease-out
@@ -44,9 +44,9 @@
         &::after
           color: $blue
 
-    .owl-next
-      &::after
-        transform: rotate(180deg), translate(-50%, -50%)
+      .owl-next
+        &::after
+          transform: rotate(180deg), translate(-50%, -50%)
 
 .slider-packages
   .owl-nav
@@ -56,6 +56,8 @@
     display: flex
     justify-content: space-between
     width: 120%
+    background: transparent !important
+    color: transparent !important
 
     +md
       display: none
@@ -65,8 +67,6 @@
       position: relative
       width: 25px
       height: 20px
-      background: transparent
-      color: transparent
 
       &::after
         content: "➞"
@@ -105,7 +105,7 @@
         background-color: $blue
 
       span
-        display: none
+        display: none !important
 
 .feedback
   .owl-dots
