@@ -14,9 +14,6 @@
         </ul>
         <a class="slider-started__button button" :href="slide.button.link">{{ slide.button.text }}</a>
       </div>
-
-      <!-- <template v-slot:prev><span class="prev">&#5176;</span></template>
-      <template v-slot:next><span class="next">&#5171;</span></template> -->
     </carousel>
   </div>
 </template>
