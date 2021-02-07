@@ -53,6 +53,9 @@ export default {
     max-width: 1170px
     width: 100%
 
+    +mdb
+      max-width: 100%
+
     &__title
       margin-bottom: 25px
 

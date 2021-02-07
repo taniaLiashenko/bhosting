@@ -107,9 +107,12 @@ export default {
       min-height: 705px
       padding: 45px 0
 
-      +sm
+      +mdb
         flex-direction: column
         min-height: 620px
+
+      +xs
+        padding-bottom: 80px
 
     &__socials
       margin-right: 40px
@@ -118,5 +121,6 @@ export default {
         margin: 0 0 20px
 
     &__slider
+      max-width: 100%
       margin: 0 auto
 </style>

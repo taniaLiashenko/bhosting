@@ -12,7 +12,13 @@
     flex-direction: column
 
     +bg
-      right: -40px
+      right: 0
+
+    +xs
+      top: auto
+      right: 50%
+      bottom: -68px
+      flex-direction: row
 
     .owl-prev,
     .owl-next
@@ -35,8 +41,8 @@
         width: 15px
         height: 15px
         color: $white
-        transform: translate(-50%, -50%)
         transition: color 0.25s ease-out
+        transform: translate(-50%, -50%)
 
       &:hover
         background-color: rgba(26, 26, 26, 0.1)
@@ -44,9 +50,13 @@
         &::after
           color: $blue
 
-      .owl-next
-        &::after
-          transform: rotate(180deg), translate(-50%, -50%)
+    .owl-prew
+      &::after
+        content: "<"
+
+    .owl-next
+      &::after
+        content: ">"
 
 .slider-packages
   .owl-nav
@@ -136,4 +146,4 @@
         background: linear-gradient(to right top, $blue 10%, $violet 100%)
 
       span
-        display: none
+        display: none !important

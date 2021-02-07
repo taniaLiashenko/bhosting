@@ -88,4 +88,7 @@ export default {
       max-width: 700px
       margin-bottom: 70px
 
+    &__list
+      max-width: 100%
+
 </style>

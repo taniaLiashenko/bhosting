@@ -24,7 +24,7 @@
         <button class="header__burger" type="button" @click="toggleMobMenu">
           <SvgIcon name="lines"/>
         </button>
-        <nav class="header__menu" v-if="mobMenuOpen">
+        <nav class="header__menu" v-show="mobMenuOpen">
           <button class="header__close" type="button" @click="toggleMobMenu">
             <SvgIcon name="close"/>
           </button>

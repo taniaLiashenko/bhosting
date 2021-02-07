@@ -180,7 +180,7 @@ export default {
       object-fit: cover
 
     &__info-list
-      max-width: 1170px
+      max-width: 100%
       padding-top: 170px
 
       +sm

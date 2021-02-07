@@ -10,7 +10,7 @@
         <div class="subscribe__inner">
           <form class="subscribe__form" action="#" method="post" novalidate="true" @submit="checkForm">
             <input class="subscribe__input" type="email" placeholder="Enter your email address" v-model="email"/>
-            <input class="subscribe__button" type="submit" value="Subscribe" @blur="clearForm">
+            <button class="subscribe__button" @blur="clearForm">Subscribe</button>
             <p class="subscribe__error" v-if="error">
               Please, enter the correct e-mail
             </p>
@@ -182,9 +182,15 @@ export default {
       top: 60px
       color: yellow
 
+      +xs
+        top: -25px
+
     &__successful
       position: absolute
       top: 60px
       color: black
+
+      +xs
+        top: -25px
 
 </style>

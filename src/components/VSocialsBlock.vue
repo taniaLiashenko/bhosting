@@ -46,7 +46,7 @@ export default {
     justify-content: center
     flex-wrap: wrap
 
-    +sm
+    +mdb
       flex-direction: row
       justify-content: space-between
       width: 100%
@@ -56,7 +56,7 @@ export default {
       justify-content: flex-start
       min-width: 193px
 
-      +sm
+      +mdb
         justify-content: center
 
     .svg-icon
@@ -73,7 +73,7 @@ export default {
       margin-bottom: 20px
       transition: transform 0.25s ease-out
 
-      +sm
+      +mdb
         width: 25px
         height: 25px
         margin-right: 15px
